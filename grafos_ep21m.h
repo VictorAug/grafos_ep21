@@ -1,19 +1,6 @@
 #ifndef GRAFOS_EP21M_H_INCLUDED
 #define GRAFOS_EP21M_H_INCLUDED
-#define Vertex int
-#define Edge Arc
-#define EDGE ARC
-#define graph digraph
-#define Graph Digraph
-#define GRAPHInit DIGRAPHInit
-#define GRAPHShow DIGRAPHShow
-#define adj_graph adj_digraph
-#define adj_Graph adj_Digraph
-#define adjGRAPHInit adjDIGRAPHInit
-#define adjGRAPHShow adjDIGRAPHShow
-#include <limits.h>
-#define maxV USHRT_MAX
-static int *parent, *lbl, *dist, cnt;
+#include "grafos_ep21.h"
 
 typedef struct Arc{
 	Vertex v;
