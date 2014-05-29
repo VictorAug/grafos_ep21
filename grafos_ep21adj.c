@@ -1,15 +1,8 @@
-#include "grafos_ep21adj.h"
-#include "grafos_ep21Q.h"
-#include <stdio.h>
-#include <stdlib.h>
-#define maxV USHRT_MAX
+#include "grafos_ep21.h"
 
 adj_Digraph adj_DIGRAPHInit(int V)
 {
 	int v;
-	free(lbl);
-	free(dist);
-	free(parent);
 	adj_Digraph G = malloc(sizeof(adj_Digraph));
 	G->V = V;
 	G->A = 0;
