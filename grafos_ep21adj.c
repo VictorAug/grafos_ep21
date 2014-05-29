@@ -65,19 +65,20 @@ void adj_DIGRAPHbfs(adj_Digraph G, Vertex s)
     lbl[s] = c++;
     parent[s] = s;
     QUEUEPut(s);
-    for(w = 0; w < G->V; w++)
+    printf("____");
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n----+---");
+        printf("|  %d  ",w);
+    printf("\n----+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nFILA");
     while(!QUEUEEmpty())
     {
         v = QUEUEGet();
-        printf("| %d ",v);
+        printf("|  %d  ",v);
         for(p = G->adj[v]; p != NULL; p = p->next)
             if(lbl[p->w] == -1){
                 lbl[p->w] = c++;
@@ -85,8 +86,8 @@ void adj_DIGRAPHbfs(adj_Digraph G, Vertex s)
                 QUEUEPut(p->w);
             }
     }
-    printf("\n");
-    for(w = 0; w < G->V; w++)
+    printf("\n____");
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     QUEUEFree();
     printf("\n\n");
@@ -125,40 +126,41 @@ void adj_DIGRAPHdist(adj_Digraph G, Vertex s)
 void adj_DIGRAPHShow1(adj_Digraph G)
 {
     Vertex w;
-    for(w = 0; w < G->V; w++)
-        printf("______");
+    printf("______");
+    for(w = 0; w <= G->V; w++)
+        printf("_____");
     printf("\n\n    i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n------+---");
+        printf("|  %d  ",w);
+    printf("\n------+-----");
     for(w = 1; w < G->V; w++)
         printf("+---");
     printf("\nPARENT");
     for(w = 0; w < G->V; w++)
         printf("| %d ",parent[w]);
-    printf("\n");
-    for(w = 0; w < G->V; w++)
-        printf("______");
+    printf("\n______");
+    for(w = 0; w <= G->V; w++)
+        printf("_____");
     printf("\n\n");
 }
 
 void adj_DIGRAPHShow2(adj_Digraph G)
 {
     Vertex w;
-    printf("\n");
-    for(w = 0; w < G->V; w++)
+    printf("____");
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n----+---");
+        printf("|  %d  ",w);
+    printf("\n----+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nDIST");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",dist[w]);
-    printf("\n");
-    for(w = 0; w < G->V; w++)
+        printf("|  %d  ",dist[w]);
+    printf("\n____");
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n");
 }
