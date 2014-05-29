@@ -1,6 +1,4 @@
 #include "grafos_ep21Q.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 void QUEUEInit(int v)
 {
@@ -14,7 +12,7 @@ void QUEUEPut(Vertex v)//vertice 0
     i++;
 }
 
-Vertex QUEUEGet()//é o elemento da primeira posicao
+Vertex QUEUEGet()//ï¿½ o elemento da primeira posicao
 {
     int j, temp = q[0];
     if(i > 1)
