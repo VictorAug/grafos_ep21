@@ -1,18 +1,6 @@
 #ifndef GRAFOS_EP21ADJ_H_INCLUDED
 #define GRAFOS_EP21ADJ_H_INCLUDED
-#include <limits.h>
-#define Vertex int
-#define Edge Arc
-#define EDGE ARC
-#define graph digraph
-#define Graph Digraph
-#define GRAPHInit DIGRAPHInit
-#define GRAPHShow DIGRAPHShow
-#define adj_graph adj_digraph
-#define adj_Graph adj_Digraph
-#define adjGRAPHInit adjDIGRAPHInit
-#define adjGRAPHShow adjDIGRAPHShow
-static int *parent, *dist, *lbl, c;
+#include "grafos_ep21.h"
 
 struct no{
 	Vertex w;
