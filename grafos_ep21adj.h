@@ -2,18 +2,6 @@
 #define GRAFOS_EP21ADJ_H_INCLUDED
 #include "grafos_ep21.h"
 
-struct no{
-	Vertex w;
-	struct no *next;
-};
-typedef struct no *link;
-
-struct adj_digraph{
-	int V, A;
-	link *adj;
-};
-typedef struct adj_digraph *adj_Digraph;
-
 void reset_cc();
 
 adj_Digraph adj_DIGRAPHInit(int);
