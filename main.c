@@ -136,7 +136,7 @@ int main()
                                         break;
                                     default:
                                         printf("Opcao invalida!\n\n");
-                                        getc();
+                                        getch();
                                 }
                             }while(m3 != 9);
                             break;
@@ -244,7 +244,7 @@ int main()
                                         break;
                                     default:
                                         printf("\nOpcao invalida!\n");
-                                        getc();
+                                        getch();
                                 }
                             }while(m3 != 9);
                             break;
@@ -373,7 +373,7 @@ int main()
                                         break;
                                     default:
                                         printf("\nOpcao invalida!\n\n");
-                                        getc();
+                                        getch();
                                 }
                             }while(m3 != 9);
                             break;
@@ -483,7 +483,7 @@ int main()
                                         break;
                                     default:
                                         printf("\nOpcao invalida!\n\n");
-                                        getc();
+                                        getch();
                                 }
                             }while(m3 != 9);
                             break;
@@ -491,7 +491,7 @@ int main()
                             break;
                         default:
                             printf("\nOpcao invalida!\n\n");
-                            getc();
+                            getch();
                     }
                 }while(m2 != 9);
                 break;
@@ -527,7 +527,7 @@ int main()
                                     	printf("\nMatriz deletada!\n\n");
                                     }
                                     else printf("\nGrafo inexistente!");
-                                    getc();
+                                    getch();
                                     break;
                                 case 2:
                                     if(d2 == 1){
@@ -536,13 +536,13 @@ int main()
                                     	printf("\nLista deletada!\n\n");
                                     }
                                     else printf("\nGrafo inexistente!");
-                                    getc();
+                                    getch();
                                     break;
                                 case 9:
                                     break;
                                 default:
                                     printf("\nOpcao invalida!");
-                                    getc();
+                                    getch();
                             }
                         }while(m3 != 9);
                         break;
@@ -566,7 +566,7 @@ int main()
                                     	printf("\nMatriz deletada!");
                                     }
                                     else printf("\nDigrafo inexistente!");
-                                    getc();
+                                    getch();
                                     break;
                                 case 2:
                                     if(){
@@ -575,26 +575,26 @@ int main()
                                     	printf("\nLista deletada!");
                                     }
                                     else printf("\nDigrafo inexistente!");
-                                    getc();
+                                    getch();
                                     break;
                                 case 9:
                                     break;
                                 default:
                                     printf("\nOpcao invalida!");
-                                    getc();
+                                    getch();
                             }
                         }while(m3 != 9);
                         break;
                     default:
                         printf("\nOpcao invalida!\n\n");
-                        getc();
+                        getch();
                 }
                 break;
             case 9://voltar para menu 1
                 break;
             default:
                 printf("Opcao invalida!\n\n");
-                getc();
+                getch();
         }
     }while(m1 != 9);
     return 0;
