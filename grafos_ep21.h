@@ -24,4 +24,23 @@ typedef struct Arc{
 	Vertex w;
 }Arc;
 
+struct digraph{
+	int V;
+	int A;
+	int **adj;
+};
+typedef struct digraph *Digraph;
+
+struct no{
+	Vertex w;
+	struct no *next;
+};
+typedef struct no *link;
+
+struct adj_digraph{
+	int V, A;
+	link *adj;
+};
+typedef struct adj_digraph *adj_Digraph;
+
 #endif
