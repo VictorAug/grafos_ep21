@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#include "grafos_ep21adj.h"
-#include "grafos_ep21m.h"
+#include "grafos_ep21.h"
 
 int main()
 {
@@ -40,9 +36,6 @@ int main()
                         case 1://Matriz de adjacencia
                             do{
                                 printf("\n");
-                                free(lbl);
-                                free(dist);
-                                free(parent);
                                 printf("-------------------------------------\n");
                                 printf("----Grafos: Matriz de Adjacencias----\n");
                                 printf("-------------------------------------\n\n");
@@ -143,16 +136,13 @@ int main()
                                         break;
                                     default:
                                         printf("Opcao invalida!\n\n");
-                                        system("pause");
+                                        getc();
                                 }
                             }while(m3 != 9);
                             break;
                         case 2://Lista de adjacencias
                             do{
                                 printf("\n");
-                                free(lbl);
-                                free(dist);
-                                free(parent);
                                 printf("--------------------------------------\n");
                                 printf("-----Grafos: Lista de Adjacencias-----\n");
                                 printf("--------------------------------------\n\n");
@@ -253,15 +243,16 @@ int main()
                                     case 9:
                                         break;
                                     default:
-                                        printf("Opcao invalida!\n");
+                                        printf("\nOpcao invalida!\n");
+                                        getc();
                                 }
                             }while(m3 != 9);
                             break;
                         case 9://voltar
                             break;
                         default:
-                            printf("Opcao invalida!\n\n");
-                            system("pause");
+                            printf("\nOpcao invalida!\n\n");
+                            getc();
                     }
                 }while(m2 != 9);
                 break;
@@ -281,9 +272,6 @@ int main()
                         case 1://Matriz de adjacencia
                             do{
                                 printf("\n");
-                                free(lbl);
-                                free(dist);
-                                free(parent);
                                 printf("--------------------------------------\n");
                                 printf("----Digrafos: Matriz de Adjacencia----\n");
                                 printf("--------------------------------------\n\n");
@@ -384,17 +372,14 @@ int main()
                                     case 9:
                                         break;
                                     default:
-                                        printf("Opcao invalida!\n\n");
-                                        system("pause");
+                                        printf("\nOpcao invalida!\n\n");
+                                        getc();
                                 }
                             }while(m3 != 9);
                             break;
                         case 2://Lista de adjacencias
                             do{
                                 printf("\n");
-                                free(lbl);
-                                free(dist);
-                                free(parent);
                                 printf("--------------------------------------\n");
                                 printf("----Digrafos: Lista de Adjacencias----\n");
                                 printf("--------------------------------------\n\n");
@@ -497,16 +482,16 @@ int main()
                                     case 9:
                                         break;
                                     default:
-                                        printf("Opcao invalida!\n\n");
-                                        system("pause");
+                                        printf("\nOpcao invalida!\n\n");
+                                        getc();
                                 }
                             }while(m3 != 9);
                             break;
                         case 9://voltar
                             break;
                         default:
-                            printf("Opcao invalida!\n\n");
-                            system("pause");
+                            printf("\nOpcao invalida!\n\n");
+                            getc();
                     }
                 }while(m2 != 9);
                 break;
@@ -536,22 +521,28 @@ int main()
                             switch(m3)
                             {
                                 case 1:
-                                    MG = Matriz_DIGRAPHdel();
-                                    d1 = 0;
-                                    printf("Matriz deletada!\n\n");
-                                    system("pause");
+                                    if(d1 == 1){
+                                    	MG = Matriz_DIGRAPHdel();
+                                    	d1 = 0;
+                                    	printf("\nMatriz deletada!\n\n");
+                                    }
+                                    else printf("\nGrafo inexistente!");
+                                    getc();
                                     break;
                                 case 2:
-                                    AG = adj_DIGRAPHdel();
-                                    d2 = 0;
-                                    printf("Lista deletada!\n\n");
-                                    system("pause");
+                                    if(d2 == 1){
+                                    	AG = adj_DIGRAPHdel();
+                                    	d2 = 0;
+                                    	printf("\nLista deletada!\n\n");
+                                    }
+                                    else printf("\nGrafo inexistente!");
+                                    getc();
                                     break;
                                 case 9:
                                     break;
                                 default:
-                                    printf("Opcao invalida!\n\n");
-                                    system("pause");
+                                    printf("\nOpcao invalida!");
+                                    getc();
                             }
                         }while(m3 != 9);
                         break;
@@ -569,35 +560,41 @@ int main()
                             switch(m3)
                             {
                                 case 1:
-                                    MD = Matriz_DIGRAPHdel();
-                                    x1 = 0;
-                                    printf("\nMatriz deletada!\n\n");
-                                    system("pause");
+                                    if(x1 == 1){
+                                    	MD = Matriz_DIGRAPHdel();
+                                    	x1 = 0;
+                                    	printf("\nMatriz deletada!");
+                                    }
+                                    else printf("\nDigrafo inexistente!");
+                                    getc();
                                     break;
                                 case 2:
-                                    AD = adj_DIGRAPHdel();
-                                    x2 = 0;
-                                    printf("\nLista deletada!\n\n");
-                                    system("pause");
+                                    if(){
+                                    	AD = adj_DIGRAPHdel();
+                                    	x2 = 0;
+                                    	printf("\nLista deletada!");
+                                    }
+                                    else printf("\nDigrafo inexistente!");
+                                    getc();
                                     break;
                                 case 9:
                                     break;
                                 default:
-                                    printf("Opcao invalida!\n\n");
-                                    system("pause");
+                                    printf("\nOpcao invalida!");
+                                    getc();
                             }
                         }while(m3 != 9);
                         break;
                     default:
-                        printf("Opcao invalida!\n\n");
-                        system("pause");
+                        printf("\nOpcao invalida!\n\n");
+                        getc();
                 }
                 break;
             case 9://voltar para menu 1
                 break;
             default:
                 printf("Opcao invalida!\n\n");
-                system("pause");
+                getc();
         }
     }while(m1 != 9);
     return 0;
