@@ -1,7 +1,5 @@
 #include "grafos_ep21m.h"
 #include "grafos_ep21Q.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 Arc ARC(Vertex v, Vertex w)
 {
@@ -26,9 +24,6 @@ int **MATRIXInt(int r, int c, int val)
 Digraph Matriz_DIGRAPHInit(int V)
 {
 	Digraph G = malloc(sizeof *G);
-	free(lbl);
-	free(dist);
-	free(parent);
 	G->V = V;
 	G->A = 0;
 	lbl = malloc(V*sizeof(int));
@@ -110,19 +105,20 @@ void Matriz_DIGRAPHbfs(Digraph G, Vertex s)
     lbl[s] = cnt++;
     parent[s] = s;
     QUEUEPut(s);
-    for(w = 0; w < G->V; w++)
+    printf("____");
+    for(w = 1; w < G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n----+---");
+        printf("|  %d  ",w);
+    printf("\n----+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nFILA");
     while(!QUEUEEmpty())
     {
         v = QUEUEGet();
-        printf("| %d ",v);
+        printf("|  %d  ",v);
         for(w = 0; w < G->V; w++)
             if(G->adj[v][w] == 1 && lbl[w] == -1){
                 lbl[w] = cnt++;
@@ -130,8 +126,8 @@ void Matriz_DIGRAPHbfs(Digraph G, Vertex s)
                 QUEUEPut(w);
             }
     }
-    printf("\n");
-    for(w = 0; w < G->V; w++)
+    printf("\n____");
+    for(w = 1; w < G->V; w++)
         printf("_____");
     printf("\n\n");
     Matriz_DIGRAPHShow1(G);
@@ -140,38 +136,40 @@ void Matriz_DIGRAPHbfs(Digraph G, Vertex s)
 void Matriz_DIGRAPHShow1(Digraph G)
 {
     Vertex w;
-    for(w = 0; w < G->V; w++)
+    printf("______");
+    for(w = 1; w < G->V; w++)
         printf("______");
     printf("\n\n    i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n------+---");
+        printf("|  %d  ",w);
+    printf("\n------+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nPARENT");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",parent[w]);
-    printf("\n");
-    for(w = 0; w < G->V; w++)
-        printf("______");
+        printf("|  %d  ",parent[w]);
+    printf("\n______");
+    for(w = 1; w < G->V; w++)
+        printf("_____");
     printf("\n\n");
 }
 
 void Matriz_DIGRAPHShow2(Digraph G)
 {
     Vertex w;
-    for(w = 0; w < G->V; w++)
+    printf("____");
+    for(w = 1; w < G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",w);
-    printf("\n----+---");
+        printf("|  %d  ",w);
+    printf("\n----+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nDIST");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",dist[w]);
-    printf("\n");
+        printf("|  %d  ",dist[w]);
+    printf("\n____");
     for(w = 0; w < G->V; w++)
         printf("_____");
     printf("\n");
