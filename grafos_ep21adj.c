@@ -134,10 +134,10 @@ void adj_DIGRAPHShow1(adj_Digraph G)
         printf("|  %d  ",w);
     printf("\n------+-----");
     for(w = 1; w < G->V; w++)
-        printf("+---");
+        printf("+-----");
     printf("\nPARENT");
     for(w = 0; w < G->V; w++)
-        printf("| %d ",parent[w]);
+        printf("|  %d  ",parent[w]);
     printf("\n______");
     for(w = 0; w <= G->V; w++)
         printf("_____");
