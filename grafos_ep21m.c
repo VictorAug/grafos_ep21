@@ -106,7 +106,7 @@ void Matriz_DIGRAPHbfs(Digraph G, Vertex s)
     parent[s] = s;
     QUEUEPut(s);
     printf("____");
-    for(w = 1; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
@@ -127,7 +127,7 @@ void Matriz_DIGRAPHbfs(Digraph G, Vertex s)
             }
     }
     printf("\n____");
-    for(w = 1; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n");
     Matriz_DIGRAPHShow1(G);
@@ -137,7 +137,7 @@ void Matriz_DIGRAPHShow1(Digraph G)
 {
     Vertex w;
     printf("______");
-    for(w = 1; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("______");
     printf("\n\n    i ");
     for(w = 0; w < G->V; w++)
@@ -149,7 +149,7 @@ void Matriz_DIGRAPHShow1(Digraph G)
     for(w = 0; w < G->V; w++)
         printf("|  %d  ",parent[w]);
     printf("\n______");
-    for(w = 1; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n");
 }
@@ -158,7 +158,7 @@ void Matriz_DIGRAPHShow2(Digraph G)
 {
     Vertex w;
     printf("____");
-    for(w = 1; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n\n  i ");
     for(w = 0; w < G->V; w++)
@@ -170,7 +170,7 @@ void Matriz_DIGRAPHShow2(Digraph G)
     for(w = 0; w < G->V; w++)
         printf("|  %d  ",dist[w]);
     printf("\n____");
-    for(w = 0; w < G->V; w++)
+    for(w = 0; w <= G->V; w++)
         printf("_____");
     printf("\n");
 }
