@@ -2,18 +2,6 @@
 #define GRAFOS_EP21M_H_INCLUDED
 #include "grafos_ep21.h"
 
-typedef struct Arc{
-	Vertex v;
-	Vertex w;
-}Arc;
-
-struct digraph{
-	int V;
-	int A;
-	int **adj;
-};
-typedef struct digraph *Digraph;
-
 Arc ARC(Vertex, Vertex);
 
 int **MATRIXInt(int, int, int);
